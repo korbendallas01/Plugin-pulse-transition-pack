@@ -1,0 +1,48 @@
+{
+	"name": "Pulse transition pack",
+	"version": "1.0",
+	"description": "Additional transition animation styles for Pulse slideshows.",
+	"demo": "http://koken.me",
+	"author": {
+		"name": "Koken",
+		"link": "https://store.koken.me/authors/koken"
+	},
+
+	"koken_version_required": "0.12.0-beta.1",
+
+	"id": "koken_transition_pack",
+	"plugin": "transitions.js",
+	"title": "Koken transition pack",
+
+	"transitions": [
+		{ "label": "Cube", "value": "koken_transition_pack_cube", "supports_easing": true },
+		{ "label": "Flash", "value": "koken_transition_pack_flash" },
+		{ "label": "Flip", "value": "koken_transition_pack_flip", "supports_easing": true },
+		{ "label": "Reveal", "value": "koken_transition_pack_reveal", "supports_easing": true },
+		{ "label": "Zoom", "value": "koken_transition_pack_zoom" }
+	],
+
+	"settings": {
+
+		"koken_transition_pack_direction": {
+			"label": "Direction",
+			"type": "select",
+			"options": [
+				{ "label": "Horizontal", "value": "horizontal" },
+				{ "label": "Vertical", "value": "vertical" }
+			],
+			"value": "horizontal",
+			"dependencies": {
+				"evaluate": "all",
+				"conditions": [
+					{
+						"option": "transition_type",
+						"equals": "koken_transition_pack_reveal"
+					}
+				]
+			}
+		}
+
+	}
+
+}
